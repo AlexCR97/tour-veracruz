@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar>
+
+    <!-- Icon on the left -->
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button color="light"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Title -->
+    <ion-title color="light">Nombre del lugar</ion-title>
+
+    <!-- Icon on the right-->
+    <ion-buttons slot="end">
+      <ion-button id="ion-button-more">
+        <ion-icon slot="icon-only" name="more" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- cover image -->
+  <div class="cover-image">
+
+    <ion-item class="item-container" lines="none">
+      <ion-item lines="none">
+        <h1>3.8</h1>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+      </ion-item>
+      <ion-icon name="camera" color="light" slot="end" (click)="onClickCamera()"></ion-icon>
+    </ion-item>
+
+  </div><!-- cover image -->
+
+  <!-- segments -->
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable value="contacto">
+    <ion-segment-button class="ion-text-capitalize" value="contacto">
+      <ion-label>Contacto</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="ion-text-capitalize" value="acerca-de">
+      <ion-label>Acerca de</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="ion-text-capitalize" value="resena">
+      <ion-label>Reseña</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- container contacto -->
+  <div class="contacto ion-padding" id="contacto">
+    
+    <!-- direccion -->
+    <div class="contacto-item">
+      <ion-item class="contacto-item-header" lines="none">
+        <ion-icon name="pin" color="primary" slot="start"></ion-icon>
+        <ion-label>Dirección</ion-label>
+      </ion-item>
+      
+      <ion-item lines="full">
+        <ion-text>
+          <p>Tulipanes #1100, Union Burocratica, Sector No.2</p>
+          <p>Cd. El Mante, Tamaulipas</p>
+        </ion-text>
+      </ion-item>
+    </div><!-- direccion -->
+
+    <!-- horario -->
+    <div class="contacto-item">
+      <ion-item class="contacto-item-header" lines="none">
+        <ion-icon name="clock" color="primary" slot="start"></ion-icon>
+        <ion-label>Horario</ion-label>
+      </ion-item>
+      
+      <ion-item lines="full">
+        <ion-text class="contacto-item-horario">
+          <h4>L</h4>
+          <p>8:00am</p>
+          <p>8:00pm</p>
+        </ion-text>
+        <ion-text class="contacto-item-horario">
+          <h4>M</h4>
+          <p>8:00am</p>
+          <p>8:00pm</p>
+        </ion-text>
+        <ion-text class="contacto-item-horario">
+          <h4>M</h4>
+          <p>8:00am</p>
+          <p>8:00pm</p>
+        </ion-text>
+        <ion-text class="contacto-item-horario">
+          <h4>J</h4>
+          <p>8:00am</p>
+          <p>8:00pm</p>
+        </ion-text>
+        <ion-text class="contacto-item-horario">
+          <h4>V</h4>
+          <p>8:00am</p>
+          <p>8:00pm</p>
+        </ion-text>
+      </ion-item>
+    </div><!-- horario -->
+
+    <!-- telefono -->
+    <div class="contacto-item">
+      <ion-item class="contacto-item-header" lines="none">
+        <ion-icon name="call" color="primary" slot="start"></ion-icon>
+        <ion-label>Telefono</ion-label>
+      </ion-item>
+      
+      <ion-item lines="full">
+        <ion-text>
+          <p>831 114 65 63</p>
+        </ion-text>
+      </ion-item>
+    </div><!-- telefono -->
+    
+  </div>
+
+  <!-- container acerca de -->
+  <div class="acerca-de ion-padding" id="acerca-de">
+    <h4> ¿Sabías que? </h4>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam cum fuga dolorem. Error dolorum, sit consectetur excepturi minus unde magni temporibus vel quam quaerat distinctio nostrum tempora vero perspiciatis aliquid. lorem</p>
+    <br>
+
+    <h4> Información histórica </h4>
+    
+    <p><b>1900</b> Lorem ipsum dolor sit amet consectetur adipisicing elit suscipit et numquam.</p>
+    <p><b>1962</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eaque architecto illo incidunt veritatis ab eius.</p>
+    <p><b>2003</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, temporibus omnis! Voluptatum voluptas neque.</p>
+    <br>
+
+  </div>
+
+  <!-- container resena -->
+  <div class="resena ion-padding" id="resena">
+
+    <h5> 426 reseñas </h5>
+
+    <!-- ratings container -->
+    <div class="ratings-container">
+
+      <div class="rating-item">
+        <p>5 <ion-icon name="star"></ion-icon></p>
+        <div class="rectangle"></div>
+        <p>20%</p>
+      </div><!-- rating-item -->
+      <div class="rating-item">
+        <p>4 <ion-icon name="star"></ion-icon></p>
+        <div class="rectangle"></div>
+        <p>40%</p>
+      </div><!-- rating-item -->
+      <div class="rating-item">
+        <p>3 <ion-icon name="star"></ion-icon></p>
+        <div class="rectangle"></div>
+        <p>20%</p>
+      </div><!-- rating-item -->
+      <div class="rating-item">
+        <p>2 <ion-icon name="star"></ion-icon></p>
+        <div class="rectangle"></div>
+        <p>10%</p>
+      </div><!-- rating-item -->
+      <div class="rating-item">
+        <p>1 <ion-icon name="star"></ion-icon></p>
+        <div class="rectangle"></div>
+        <p>10%</p>
+      </div><!-- rating-item -->
+
+    </div><!-- ratings container -->
+
+    <p class="escribir-resena"> Escribir una reseña </p>
+
+    <!-- resena item -->
+    <ion-card class="resena-item" *ngFor="let resena of resenas">
+
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>
+          <ion-text>
+            <p>{{resena.username}}</p>
+            <p class="resena-item-tiempo">{{resena.time}}</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+
+      <div class="rating-bar">
+        <ion-item lines="none">
+          <p>{{resena.rating}}</p>
+          <ion-icon name="star" color="dark"></ion-icon>
+          <ion-icon name="star" color="dark"></ion-icon>
+          <ion-icon name="star" color="dark"></ion-icon>
+          <ion-icon name="star" color="dark"></ion-icon>
+          <ion-icon name="star" color="dark"></ion-icon>
+        </ion-item>
+      </div>
+
+      <ion-card-content>
+        {{resena.comment}}
+      </ion-card-content>
+    </ion-card><!-- resena-item -->
+
+  </div><!-- container resena -->
+
+</ion-content>

@@ -1,0 +1,40 @@
+ion-toolbar {
+    --background: transparent;
+}
+
+.custom-searchbar {
+    margin-top: 10px;
+    margin-bottom: -15px;
+    
+    ion-searchbar {
+        --background: rgba(0, 0, 0, 0.40);
+        --color: white;
+        --icon-color: white;
+    }
+
+    ion-icon {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+ion-card {
+    --background: #9d26a8;
+    --color: white;
+
+    img {
+        height: 180px;
+    }
+
+    ion-item {
+        --background: transparent;
+
+        ion-label {
+            --color: white;
+        }
+
+        .rating {
+            margin-right: -20px;
+        }
+    }
+}

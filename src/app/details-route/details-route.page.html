@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+
+    <!-- Icon on the left -->
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button color="light"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Title -->
+    <ion-title color="light">Nombre de la ruta</ion-title>
+
+    <!-- Icon on the right-->
+    <ion-buttons slot="end">
+      <ion-button id="ion-button-more">
+        <ion-icon slot="icon-only" name="more" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- cover image -->
+  <div class="cover-image">
+
+    <ion-item class="item-container" lines="none">
+      <ion-item lines="none">
+        <h1>3.8</h1>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+        <ion-icon name="star" color="light"></ion-icon>
+      </ion-item>
+    </ion-item>
+
+  </div><!-- cover image -->
+
+  <ion-grid>
+    <ion-row>
+
+      <!-- route detail -->
+      <ion-col class="route-detail">
+        <h5>Tiempo estimado</h5>
+        <div class="route-detail-item">
+          <ion-icon name="clock" color="primary"></ion-icon>
+          <ion-label>4 hrs</ion-label>
+        </div>
+      </ion-col><!-- route detail -->
+      
+      <!-- route detail -->
+      <ion-col class="route-detail">
+        <h5>Promedio gastado</h5>
+        <div class="route-detail-item">
+          <ion-icon name="cash" color="primary"></ion-icon>
+          <ion-label>$789.00</ion-label>
+        </div>
+      </ion-col><!-- route detail -->
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- places container -->
+  <div class="places-container ion-padding">
+
+    <!-- place-details -->
+    <div class="place-details" *ngFor="let place of places">
+
+      <!-- hour/icon -->
+      <div class="place-hour-icon">
+        <p class="place-hour">8:00 am</p>
+        <div class="icon-rounded-border center-both">
+          <ion-icon name="pizza" color="light"></ion-icon>
+        </div>
+      </div><!-- hour/icon -->
+
+      <!-- other details -->
+      <div class="place-others">
+        <p class="place-name"> Nombre del lugar </p>
+
+        <div class="rating-bar">
+          <ion-item lines="none">
+            <p>4.5</p>
+            <ion-icon name="star" color="dark"></ion-icon>
+            <ion-icon name="star" color="dark"></ion-icon>
+            <ion-icon name="star" color="dark"></ion-icon>
+            <ion-icon name="star" color="dark"></ion-icon>
+            <ion-icon name="star" color="dark"></ion-icon>
+          </ion-item>
+        </div>
+
+        <p class="place-address"> Tulipanes #1100, Union Burocratica, Cd. El Mante, Tamaulipas </p>
+      </div><!-- other details -->
+    </div><!-- place-details -->
+
+  </div><!-- places container -->
+
+</ion-content>

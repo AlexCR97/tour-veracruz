@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item lines="none" class="custom-searchbar">
+    <ion-searchbar placeholder="Buscar lugares"></ion-searchbar>
+    <ion-icon name="options"></ion-icon>
+  </ion-item>
+
+  <div class="ion-padding">
+    
+    <ion-card *ngFor="let route of routes" (click)="onClick(route)">
+      <img src="{{route.img}}">
+
+      <ion-card-header> {{route.title}} </ion-card-header>
+
+        <ion-grid>
+          <ion-row>
+
+            <ion-col>
+              <ion-item lines="none">
+                <ion-label>{{route.time}}</ion-label>
+                <ion-icon name="time" color="light"></ion-icon>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item lines="none">
+                <ion-label>$ {{route.price}}</ion-label>
+                <ion-icon name="cash" color="light"></ion-icon>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item lines="none">
+                <ion-label>{{route.rating}}</ion-label>
+                <ion-icon name="star" color="light"></ion-icon>
+              </ion-item>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+    </ion-card>
+    
+  </div>
+
+</ion-content>
+

@@ -1,0 +1,51 @@
+ion-toolbar {
+    --background: transparent;
+}
+
+.horizontal-scrollview {
+    display: flex;
+    overflow: auto;
+    padding: 8px 0;
+    width: 100%;
+
+    .horizontal-scrollview-item {
+        flex: none;
+    }
+
+    .horizontal-scrollview-item:not(:first-child) {
+        margin-left: 15px;
+    }
+
+    .horizontal-scrollview-item-no-margin {
+        flex: none;
+    }
+}
+
+.icon-rounded-border {
+    background-color: #9d26a8;
+    border-radius: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+    width: 55px;
+    height: 55px;
+
+    ion-icon {
+        font-size: 25px;
+    }
+}
+
+.center-both {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card {
+    width: 130px;
+    height: 100px;
+}
+
+.img-card-large {
+    width: 210px;
+    height: 140px;
+}

@@ -1,0 +1,60 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="center-horizontally">
+    <img src="../../assets/images/logo.png" alt="logo">
+  </div>
+
+  <h1 class="logo-text"><span>tour</span>veracruz</h1>
+
+  <form [formGroup]="todo" (ngSubmit)="submitForm()">
+
+    <!--nombre de usuario-->
+    <ion-item class="textbox">
+      <ion-icon name="person" color="light"></ion-icon>
+      <input type="text" placeholder="Nombre de usuario" formControlName="username">
+    </ion-item>
+    
+    <!--contrasena-->
+    <ion-item class="textbox">
+      <ion-icon name="lock" color="light"></ion-icon>
+      <input type="password" placeholder="Contraseña" formControlName="password">
+    </ion-item>
+
+    <!--iniciar sesion-->
+    <button class="button-gradient ion-activatable" type="submit" [disabled]="!todo.valid">
+      Iniciar Sesion
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </button>
+
+  </form>
+  <br><br>
+
+  <p>¿Ovidaste tu contraseña?</p>
+  <br>
+
+  <p>O inicia sesión con</p>
+
+  <!--social media buttons-->
+  <div class="center-horizontally">
+    <div class="icon-rounded-border ion-activatable center-both">
+      <ion-icon name="logo-google" color="light"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </div>
+    <div class="icon-rounded-border ion-activatable center-both">
+      <ion-icon name="logo-facebook" color="light"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </div>
+    <div class="icon-rounded-border ion-activatable center-both">
+      <ion-icon name="logo-instagram" color="light"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </div>
+  </div>
+  <br>
+
+  <!--Registrarse-->
+  <p class="label-registrate">¿No tienes una cuenta? <span>Registrate</span></p>
+
+</ion-content>

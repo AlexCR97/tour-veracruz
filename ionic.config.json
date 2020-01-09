@@ -1,0 +1,7 @@
+{
+  "name": "login-design",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

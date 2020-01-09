@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!--categories-->
+  <ion-item lines="full">
+    <ion-label>Categorías</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <div class="horizontal-scrollview">
+    <div *ngFor="let category of categories" class="horizontal-scrollview-item icon-rounded-border center-both">
+      <ion-icon name="{{category}}" color="light"></ion-icon>
+    </div>
+  </div>
+  <br>
+
+  <!--popular places-->
+  <ion-item lines="full">
+    <ion-label>Lugares populares</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <div class="horizontal-scrollview">
+    <div *ngFor="let place of places" class="horizontal-scrollview-item-no-margin">
+      <ion-card (click)="onClickPlace(place)">
+        <img src="{{place.img}}" class="img-card">
+        <ion-card-content> {{place.title}} </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <br>
+
+  <!--popular routes-->
+  <ion-item lines="full">
+    <ion-label>Rutas populares</ion-label>
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <div class="horizontal-scrollview">
+    <div *ngFor="let route of routes" class="horizontal-scrollview-item-no-margin">
+      <ion-card  (click)="onClickRoute(route)">
+        <img src="{{route.img}}" class="img-card-large">
+        <ion-card-content> {{route.title}} </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>
